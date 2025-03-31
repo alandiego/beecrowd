@@ -36,11 +36,11 @@ int main()
                 if(!A.empty() && !B.empty() && A.top() == B.top()){
                     A.pop();
                     B.pop();
-                //combinou trem na estalção com trem para sair em B
+                //combinou vagão na estação com vagão para sair em B
                 }else if(!estacao.empty() && !B.empty() && estacao.top() == B.top()){
                     estacao.pop();
                     B.pop();
-                //Não houve combinação e o trem vai para estação
+                //Não houve combinação e o vagão vai para estação
                 }else if(!A.empty()){
                     estacao.push(A.top());
                     A.pop();
