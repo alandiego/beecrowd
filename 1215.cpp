@@ -6,8 +6,6 @@ int main(){
     set<string> dicionario;
     string linha;
     string palavra;
-    int prefixo;
-    int sufixo;
     
     while (cin >> linha){
         
