@@ -25,7 +25,7 @@ int main()
 	    //receive the second falf
 	    second = line.substr(half);
 	    
-	    //inverse of each half
+	    //reverse of each half
 	    reverse(first.begin(), first.end());
 	    reverse(second.begin(), second.end());
 	    
