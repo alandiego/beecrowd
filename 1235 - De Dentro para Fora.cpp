@@ -4,14 +4,12 @@ using namespace std;
 
 int main()
 {
-    int N, half;
-    string line;
-    string first;
-    string second;
-    vector<int> digitos;
-    
-    
-    ios_base :: sync_with_stdio(false);
+    	int N, half;
+    	string line;
+    	string first;
+    	string second;
+	
+    	ios_base :: sync_with_stdio(false);
 	cin.tie(0);
 	cout.tie(0);
 	
