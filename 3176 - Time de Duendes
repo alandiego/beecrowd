@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Comparador personalizado
+struct Compare {
+    bool operator()(const pair<int, string>& a, const pair<int, string>& b) {
+        if (a.first != b.first) {
+            return a.first < b.first;  // maior inteiro no topo
+        }
+        return a.second > b.second;    // menor string no topo (ordem lexicográfica)
+    }
+};
+
+int main()
+{
+	ios_base :: sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	
+	priority_queue<pair<int, string>, vector<pair<int, string>>, Compare> duendes;
+	vector<vector<pair<int, string>>> times;
+    int N;
+    string nome;
+    int idade;
+    int qtdTimes;
+    
+    cin >> N;
+    cin.ignore();
+    qtdTimes = N/3;
+    
+    times.resize(qtdTimes);
+    
+    for (int i=0; i<N; i++){
+        cin >> nome >> idade;
+        duendes.push({idade, nome});
+    }
+	
+	//monta os times
+	for (int rep=0; rep < 3; rep++){
+	    for (int i=0; i<qtdTimes; i++){
+	        times[i].push_back(duendes.top());
+	        duendes.pop();
+	    }
+    }
+    
+    //imprime
+    for (int t=1; t <= qtdTimes; t++){
+        cout << "Time " << t << '\n';
+	    for (auto &d : times[t-1]){
+	        cout << d.second << ' ' << d.first << '\n';
+	    }
+        cout << '\n';
+    }
+
+    return 0;
+}
