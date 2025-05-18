@@ -15,7 +15,7 @@ int main()
 	    cout << "Turma " << ++TC << "\n";
 	    
 	    vector<pair<int, int>> notas;
-	    int maior=-1;;
+	    int maior=-1;
 	    
 	    for (int i=0; i<N; ++i){
 	        cin >> C >> M;
