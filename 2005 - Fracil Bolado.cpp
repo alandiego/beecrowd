@@ -8,6 +8,10 @@ bool comp(int a, int b) {
 
 int main()
 {
+    ios_base :: sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    
     int N; //qtd de ratos
     int M; //qtd de alimentos
     
@@ -46,7 +50,6 @@ int main()
                 }
             }
             if (!achou){
-                //procura de que rato diminuir a fome
                 for (int j=1000; j>0; j--){
                     if (rato[j] > 0){
                         rato[j]--;
@@ -58,7 +61,7 @@ int main()
             
         }
         
-        cout << qtd_ratos_saciados << endl;
+        cout << qtd_ratos_saciados << "\n";
     }
 
     return 0;
