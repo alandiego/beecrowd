@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main (){
+    int Curupira, Boitata, Boto, Mapinguari, Iara;
+    
+    cin >> Curupira >> Boitata >> Boto >> Mapinguari >> Iara;
+    
+    int ans = Curupira * 300 + Boitata * 1500 + Boto * 600 
+        + Mapinguari * 1000 + Iara * 150  + 225;
+    
+    cout << ans << '\n';
+    
+    return 0;
+}
