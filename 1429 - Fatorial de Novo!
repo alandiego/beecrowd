@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int fatorial[6] = {0, 1, 2, 6, 24, 120};
+
+int main() {
+    string numero;
+    while (cin >> numero && numero != "0"){
+        int resp=0;
+        for (int i=numero.size()-1, j=1; i>=0; i--, j++){
+            resp+= (numero[i]-'0') * fatorial[j];
+        }
+        cout << resp << '\n';
+        
+    }
+    return 0;
+}
