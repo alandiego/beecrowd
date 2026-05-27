@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    int T, N, Y;
+    double P;
+    string ind1, ind2, ind3, ind12, ind21;
+    
+    cin >> T;
+    
+    while (T--) {
+        cin >> N;
+        cin >> Y >> P;
+
+        cin >> ind1 >> ind2 >> ind3;
+
+        ind12 = ind1.substr(0, Y) + ind2.substr(Y);
+        ind21 = ind2.substr(0, Y) + ind1.substr(Y);
+
+        double prob1 = 1.0, prob2 = 1.0;
+
+        for (int i = 0; i < N; i++) {
+            // filho 1
+            if (ind12[i] == ind3[i]) prob1 *= (1.0 - P);
+            else prob1 *= P;
+
+            // filho 2
+            if (ind21[i] == ind3[i]) prob2 *= (1.0 - P);
+            else prob2 *= P;
+        }
+
+        double ans = prob1 + prob2 - (prob1 * prob2);
+
+        cout << fixed << setprecision(7) << ans << '\n';
+    }
+
+    return 0;
+}
